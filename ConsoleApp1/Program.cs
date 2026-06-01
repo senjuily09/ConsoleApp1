@@ -3,13 +3,17 @@ namespace ConsoleApp1
 {
     class Program
     {
+        string name = "";
         static void mymethod(string fname)
         {
             Console.WriteLine(fname + "world");
         }
+        
+        // class 
+        
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Enter USer name : ");
             string username = Console.ReadLine();
             Console.WriteLine(username);
             string[] names = { "Alice", "Bob", "Charlie" };
@@ -28,11 +32,22 @@ namespace ConsoleApp1
             Console.WriteLine(numbers.Min());
             Console.WriteLine(numbers.Sum());
             // Multidimensional array
-            int[,] matrix = { { 1, 2 }, { 3, 4 } };
-            for (int i = 0; i < matrix.Length; i++) {
-                Console.WriteLine(i);
+            int[,] matrix = { { 1, 2 }, { 5, 6 } };
+
+            for (int i = 0; i < matrix.GetLength(0); i++) 
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    Console.Write(matrix[i, j] + " ");
+                }
+                Console.WriteLine();
             }
+
             mymethod("hello");
+            // class object
+            Program myObj = new Program();
+            Console.WriteLine(myObj.name);
+
         }
     }
 }
