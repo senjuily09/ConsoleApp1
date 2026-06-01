@@ -4,7 +4,7 @@ namespace ConsoleApp1
 {
     internal class Practice
     {
-        public string name;
+        public string name = "";
         public int age;
 
         public void Display()
@@ -13,12 +13,12 @@ namespace ConsoleApp1
             Console.WriteLine("Age: " + age);
         }
 
-        static void Main(string[] args)
+        public static void Run()
         {
             Practice obj1 = new Practice();
             obj1.name = "John";
             obj1.age = 20;
- 
+
             Practice obj2 = new Practice();
             obj2.name = "Alice";
             obj2.age = 22;
