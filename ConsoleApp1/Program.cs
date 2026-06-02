@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -73,6 +74,32 @@ namespace ConsoleApp1
             myObj.name = "John";
 
             Console.WriteLine("\nObject Name: " + myObj.name);
+
+            // Collections & LINQ.
+            List<string> Names = new List<string>();
+            names.Add("Alice");
+            names.Add("Bob");
+            names.Add("Charlie");
+            foreach (string name in Names)
+            {
+                Console.WriteLine(name);
+            }
+            // list of objects
+            List<students> students = new List<students>();
+            students.Add(new student){
+                name = "Alice",
+                    age = 20
+            });
+            foreach(student student in students)
+            {
+                Console.WriteLine(student.name + " is " + student.age + " years old.");
+            })
+            practice p = new practice();
+            p.variable();
+            p.conditions();
+            p.loops();
+            p.whileloop();
+
             Console.ReadLine();
         }
     }

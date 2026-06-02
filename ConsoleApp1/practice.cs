@@ -1,39 +1,52 @@
 ﻿using System;
-
 namespace ConsoleApp1
 {
-    internal class Practice
+    internal class practice
     {
-        public string name = "";
-        public int age;
-
-        public void Display()
+        public void variable() {
+            Console.WriteLine("Variables :");
+            int myNum = 5;               // Integer (whole number)
+        float myFloatNum = 5.99f;     // Floating point number
+        string myString = "Hello";     // String
+        char grade = 'A';              // Character
+        bool isCSharpFun = true;       // Boolean
+        long myLongNum = 15000000000L; // Long integer
+        short myShortNum = 5000;       // Short integer
+        Console.WriteLine($"Integer: {myNum} float: {myFloatNum} string: {myString} char: {grade} bool: {isCSharpFun} long: {myLongNum} short: {myShortNum}" );
+      
+}
+        public void conditions()
         {
-            Console.WriteLine("Name: " + name);
-            Console.WriteLine("Age: " + age);
+            Console.WriteLine("Conditions :");
+            int time = 20;
+            if (time > 0)
+            {
+                Console.WriteLine("true");
+            }
+            else
+            {
+                Console.WriteLine("false");
+            }
+        }
+        public void loops()
+        {
+            Console.WriteLine("Loops :");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        public void whileloop()
+        {
+            Console.WriteLine("While Loop :");
+            int i = 0;
+            while (i < 5)
+            {
+                Console.WriteLine(i);
+                i++;
+            }
         }
 
-        public static void Run()
-        {
-            Practice obj1 = new Practice();
-            obj1.name = "John";
-            obj1.age = 20;
 
-            Practice obj2 = new Practice();
-            obj2.name = "Alice";
-            obj2.age = 22;
-
-            Practice obj3 = new Practice();
-            obj3.name = "Bob";
-            obj3.age = 25;
-
-            obj1.Display();
-            Console.WriteLine();
-
-            obj2.Display();
-            Console.WriteLine();
-
-            obj3.Display();
         }
-    }
 }
